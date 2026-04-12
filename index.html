@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Portfolio — UX/UI Designer en devenir</title>
   <meta name="description" content="Portfolio UX/UI orienté processus et réflexion utilisateur.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,9 +14,11 @@
       <a class="brand" href="#">Adrien — UX/UI</a>
       <nav class="nav" id="main-nav">
         <a href="#projects">Projets</a>
-        <a href="#about">À propos</a>
         <a href="#skills">Compétences</a>
+        <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#about">À propos</a>
       </nav>
       <button id="menu-toggle" aria-label="Ouvrir le menu">☰</button>
     </div>
@@ -24,44 +27,126 @@
   <main>
     <section class="hero" id="hero">
       <div class="container">
-        <h1>UX/UI Designer en devenir — avec une base technique solide</h1>
-        <p class="lead">Je conçois des expériences centrées utilisateur en combinant recherche, prototypage et design UI clair. Mon approche : comprendre, tester, itérer.</p>
-        <p><a class="btn" href="#projects">Voir mes projets</a></p>
+        <div class="hero-inner">
+          <h1>Concevoir des interfaces intuitives. Bâtir des expériences performantes.</h1>
+          <p class="lead">Je conçois des expériences centrées utilisateur en combinant recherche, prototypage et design UI clair. Mon approche : comprendre, tester, itérer.</p>
+          <p><a class="btn-black" href="#projects">Voir mes projets</a></p>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="container projects">
       <h2>Projets</h2>
       <p class="lead">Les études de cas seront ajoutées ici une fois finalisées. Tu peux remplir le template disponible dans <a href="templates/case-study-template.md">templates/case-study-template.md</a> et me fournir les exports Figma pour que j'intègre les visuels et détails.</p>
-      <p><a class="btn" href="templates/case-study-template.md">Télécharger le template</a></p>
-    </section>
-
-    <section id="about" class="container about">
-      <h2>À propos</h2>
-      <p>Parcours : BTS SIO → Bachelor 3 Développement Web → transition vers UX/UI.
-      J'ai choisi l'UX/UI car j'aime résoudre des problèmes réels en concevant des expériences claires et utiles.</p>
-      <p>Approche : recherche utilisateur, prototypes rapides, tests itératifs. Je combine sensibilité produit et connaissances techniques (HTML/CSS/JS).</p>
+      <p><a class="btn-black" href="templates/case-study-template.md">Télécharger le template</a></p>
     </section>
 
     <section id="skills" class="container skills">
       <h2>Compétences</h2>
-      <div class="skill-grid">
-        <div class="card"><strong>UX Design</strong><p>Recherche, tests, wireframing</p></div>
-        <div class="card"><strong>UI Design</strong><p>Design system, hiérarchie visuelle</p></div>
-        <div class="card"><strong>Figma</strong><p>Prototypage, composants</p></div>
-        <div class="card"><strong>Prototypage</strong><p>Flows interactifs</p></div>
-        <div class="card"><strong>HTML / CSS / JS</strong><p>Base technique pour protos</p></div>
+      <div class="skills-poles">
+        <div class="pole">
+          <h3>Design &amp; Stratégie</h3>
+          <div class="pole-grid">
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <img src="img/figma-logo.png" alt="Figma" />
+              </div>
+              <div class="skill-content"><strong>Figma</strong><p>Design system, prototypage</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <!-- magnifier for research -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="11" cy="11" r="5" stroke="#000" stroke-width="1.5" fill="none"/>
+                  <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="skill-content"><strong>UX Research</strong><p>Interviews, tests, insights</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <!-- grid for design systems -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="4" y="4" width="6" height="6" stroke="#000" stroke-width="1.2" fill="none"/>
+                  <rect x="14" y="4" width="6" height="6" stroke="#000" stroke-width="1.2" fill="none"/>
+                  <rect x="4" y="14" width="6" height="6" stroke="#000" stroke-width="1.2" fill="none"/>
+                </svg>
+              </div>
+              <div class="skill-content"><strong>Design System</strong><p>Tokens, composants, documentation</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pole">
+          <h3>Tech &amp; Développement</h3>
+          <div class="pole-grid">
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <img src="img/HTML5_logo_and_wordmark.svg.png" alt="HTML5" />
+              </div>
+              <div class="skill-content"><strong>HTML</strong><p>Sémantique, accessibilité</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <img src="img/CSS3_logo_and_wordmark.svg.png" alt="CSS3" />
+              </div>
+              <div class="skill-content"><strong>CSS</strong><p>Responsive, architecture</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <img src="img/Javascript_badge.svg.png" alt="JavaScript" />
+              </div>
+              <div class="skill-content"><strong>JavaScript</strong><p>Prototypes interactifs, intégration</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <img src="img/React-icon.svg.png" alt="React" />
+              </div>
+              <div class="skill-content"><strong>React</strong><p>SPAs, composants réutilisables</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <img src="img/Laravel.svg.png" alt="Laravel" />
+              </div>
+              <div class="skill-content"><strong>Laravel</strong><p>APIs, back-end PHP</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <img src="img/github-icone.png" alt="GitHub" />
+              </div>
+              <div class="skill-content"><strong>GitHub</strong><p>Versioning, collaboration</p></div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section id="cv" class="container cv-section">
+      <h2>CV</h2>
+      <img src="img/CV_Adrien_Macaire.png" alt="CV Adrien Macaire" class="cv-image" />
+      <p style="margin-top:12px;"><a class="btn-black" href="doc/Macaire-Adrien-CV.pdf" download>Télécharger le CV (PDF)</a></p>
     </section>
 
     <section id="contact" class="container contact">
       <h2>Contact</h2>
       <p>Intéressé par une alternance UX/UI ? Contactez-moi :</p>
       <ul>
-        <li>Email: <a href="mailto:adrien@example.com">adrien@example.com</a></li>
-        <li>LinkedIn: <a href="#">Profil LinkedIn</a></li>
+        <li>Téléphone: <a href="tel:0631356756">06 31 35 67 56</a></li>
+        <li>Email: <a href="mailto:admcr019@gmail.com">admcr019@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/adrien-macaire-568b0b28b/">https://www.linkedin.com/in/adrien-macaire-568b0b28b/</a></li>
         <li>Figma: <a href="#">Fichiers publics</a></li>
       </ul>
+    </section>
+
+    <section id="certifications" class="container certifications">
+      <h2>Certifications</h2>
+      <p>J’ai suivi la formation OpenClassrooms — « Incarnez l'éthique de l'UX Designer ». <a class="btn-black" href="https://openclassrooms.com/fr/courses/3013856-decouvrez-les-fondamentaux-de-l-ux-design/8774436-incarnez-l-ethique-de-l-ux-designer" target="_blank" rel="noopener">Voir la formation</a></p>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>À propos</h2>
+      <p>Je m’appelle Adrien, j’ai 20 ans. Mon parcours est guidé par une double culture : celle du code et celle du design.</p>
+      <p>Après un BTS SIO et un Bachelor en Développement Web, j’ai choisi de me spécialiser en UX/UI. Pourquoi ? Parce qu’au-delà de la technique, ce qui me passionne, c’est de comprendre comment un utilisateur interagit avec une interface et comment rendre cette expérience la plus fluide possible.</p>
     </section>
 
   </main>
