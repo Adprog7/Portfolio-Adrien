@@ -32,7 +32,8 @@
         if(y > 30) header.classList.add('scrolled'); else header.classList.remove('scrolled');
       }
       if(backToTop){
-        if(y > 320) backToTop.classList.add('show'); else backToTop.classList.remove('show');
+        // show earlier so users spot it quickly on longer pages
+        if(y > 20) backToTop.classList.add('show'); else backToTop.classList.remove('show');
       }
     }
 
@@ -40,9 +41,59 @@
     // init state
     onScroll();
 
+    // Ensure nav state on resize: let layout CSS control desktop view
+    window.addEventListener('resize', ()=>{
+      if(!nav || !toggle) return;
+      if(window.innerWidth>900){
+        // clear inline display so CSS takes over
+        nav.style.display = 'flex';
+        toggle.setAttribute('aria-expanded','false');
+      } else {
+        // hide nav by default on small screens
+        nav.style.display = 'none';
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+
     if(backToTop){
-      backToTop.addEventListener('click', ()=>{
-        window.scrollTo({top:0,behavior:'smooth'});
+      const progressEl = document.getElementById('scroll-progress');
+      // Smooth scroll helper (requestAnimationFrame) for consistent animation
+      function smoothScrollTo(targetY, duration){
+        const startY = window.scrollY || window.pageYOffset;
+        const distance = targetY - startY;
+        const startTime = performance.now();
+        if(progressEl){ progressEl.style.width = '0%'; progressEl.classList.add('show'); }
+        function easeInOutQuad(t){ return t<0.5 ? 2*t*t : -1 + (4-2*t)*t }
+        function frame(now){
+          const time = Math.min(1, (now - startTime) / duration);
+          const eased = easeInOutQuad(time);
+          const current = Math.round(startY + (distance * eased));
+          window.scrollTo(0, current);
+          if(progressEl){
+            const prog = startY === 0 ? 1 : Math.min(1, (startY - (window.scrollY || window.pageYOffset)) / startY);
+            progressEl.style.width = Math.round(prog * 100) + '%';
+          }
+          if(time < 1) requestAnimationFrame(frame);
+          else {
+            if(progressEl){ progressEl.style.width = '100%'; setTimeout(()=>{ progressEl.classList.remove('show'); progressEl.style.width='0%'; }, 260); }
+          }
+        }
+        requestAnimationFrame(frame);
+      }
+
+      backToTop.addEventListener('click', (e)=>{
+        e.preventDefault();
+        // small click animation for feedback
+        backToTop.classList.add('clicked');
+        setTimeout(()=>{ backToTop.classList.remove('clicked'); }, 420);
+        // use JS animation for reliable smoothness (longer duration for gentler motion)
+        smoothScrollTo(0, 1000);
+        // Fallback: after the animation, if still not at top, use native smooth scroll
+        setTimeout(()=>{
+          if((window.scrollY || window.pageYOffset) > 10){
+            window.scrollTo({top:0,behavior:'smooth'});
+          }
+        }, 1100);
       });
     }
 
