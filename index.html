@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Adrien Macaire</title>
   <meta name="description" content="Portfolio UX/UI orienté processus et réflexion utilisateur.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="cursor-glow" id="cursorGlow"></div>
   <a id="top"></a>
   <header id="site-header" class="site-header">
     <div class="container header-grid">
-      <a class="brand" href="#">Adrien — UX/UI</a>
+      <a class="brand" href="#top">Adrien — UX/UI</a>
       <nav class="nav" id="main-nav">
         <a href="#projects">Projets</a>
         <a href="#skills">Compétences</a>
@@ -26,12 +27,24 @@
   </header>
 
   <main>
+        <!-- Fallback visible back-to-top (controlled by JS) -->
+        <a id="back-to-top-fallback" href="#top" aria-label="Remonter en haut" title="Remonter en haut">▲</a>
     <section class="hero" id="hero">
+      <div class="hero-glow circle-1"></div>
+      <div class="hero-glow circle-2"></div>
       <div class="container">
         <div class="hero-inner">
-          <h1>"Designer UX/UI — Spécialiste Interfaces & Intégration"</h1>
-          <p class="lead">Je conçois des expériences centrées utilisateur en combinant recherche, prototypage et design UI clair. Mon approche : comprendre, tester, itérer.</p>
-          <p><a class="btn-black" href="#projects">Voir mes projets</a></p>
+          <h1 class="hero-title" aria-label="Concevoir avec précision. Intégrer avec logique.">
+            <span class="word-reveal" style="animation-delay: 50ms;">Concevoir</span>
+            <span class="word-reveal" style="animation-delay: 150ms;">avec</span>
+            <span class="word-reveal" style="animation-delay: 250ms;"><span class="text-gradient">précision</span>.</span>
+            <br>
+            <span class="word-reveal" style="animation-delay: 450ms;">Intégrer</span>
+            <span class="word-reveal" style="animation-delay: 550ms;">avec</span>
+            <span class="word-reveal" style="animation-delay: 650ms;"><span class="text-gradient">logique</span>.</span>
+          </h1>
+          <p class="lead animate-up" style="animation-delay: 800ms;">Designer UX/UI avec une solide expertise technique. Je transforme des problématiques complexes en interfaces fluides et parfaitement réalisables.</p>
+          <p class="animate-up" style="animation-delay: 1000ms;"><a class="btn-black" href="#projects">Voir mes projets <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a></p>
         </div>
       </div>
     </section>
@@ -52,28 +65,35 @@
               <div class="tech-icon">
                 <img src="img/figma-logo.png" alt="Figma" />
               </div>
-              <div class="skill-content"><strong>Figma</strong><p>Design system, prototypage</p></div>
+              <div class="skill-content"><strong>Figma</strong><p>Design System</p></div>
             </div>
             <div class="card skill-card">
               <div class="tech-icon">
-                <!-- magnifier for research -->
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <circle cx="11" cy="11" r="5" stroke="#000" stroke-width="1.5" fill="none"/>
                   <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
               </div>
-              <div class="skill-content"><strong>UX Research</strong><p>Interviews, tests, insights</p></div>
+              <div class="skill-content"><strong>UX Research</strong><p>Interviews, tests</p></div>
             </div>
             <div class="card skill-card">
               <div class="tech-icon">
-                <!-- grid for design systems -->
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <rect x="4" y="4" width="6" height="6" stroke="#000" stroke-width="1.2" fill="none"/>
-                  <rect x="14" y="4" width="6" height="6" stroke="#000" stroke-width="1.2" fill="none"/>
-                  <rect x="4" y="14" width="6" height="6" stroke="#000" stroke-width="1.2" fill="none"/>
+                  <rect x="3" y="3" width="18" height="18" rx="2" stroke="#000" stroke-width="1.5" fill="none"/>
+                  <line x1="3" y1="9" x2="21" y2="9" stroke="#000" stroke-width="1.5"/>
+                  <line x1="9" y1="21" x2="9" y2="9" stroke="#000" stroke-width="1.5"/>
                 </svg>
               </div>
-              <div class="skill-content"><strong>Design System</strong><p>Tokens, composants, documentation</p></div>
+              <div class="skill-content"><strong>Wireframing</strong><p>Maquettes, parcours</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" stroke="#000" stroke-width="1.5" fill="none"/>
+                  <path d="M12 2A10 10 0 0 1 12 22 10 10 0 0 1 12 2Z" fill="#000"/>
+                </svg>
+              </div>
+              <div class="skill-content"><strong>Accessibilité</strong><p>Standards WCAG</p></div>
             </div>
           </div>
         </div>
@@ -85,37 +105,53 @@
               <div class="tech-icon">
                 <img src="img/HTML5_logo_and_wordmark.svg.png" alt="HTML5" />
               </div>
-              <div class="skill-content"><strong>HTML</strong><p>Sémantique, accessibilité</p></div>
-            </div>
-            <div class="card skill-card">
-              <div class="tech-icon">
-                <img src="img/CSS3_logo_and_wordmark.svg.png" alt="CSS3" />
-              </div>
-              <div class="skill-content"><strong>CSS</strong><p>Responsive, architecture</p></div>
+              <div class="skill-content"><strong>HTML / CSS</strong><p>Sémantique, responsive</p></div>
             </div>
             <div class="card skill-card">
               <div class="tech-icon">
                 <img src="img/Javascript_badge.svg.png" alt="JavaScript" />
               </div>
-              <div class="skill-content"><strong>JavaScript</strong><p>Prototypes interactifs, intégration</p></div>
+              <div class="skill-content"><strong>JavaScript</strong><p>Interactions, logique</p></div>
             </div>
             <div class="card skill-card">
               <div class="tech-icon">
                 <img src="img/React-icon.svg.png" alt="React" />
               </div>
-              <div class="skill-content"><strong>React</strong><p>SPAs, composants réutilisables</p></div>
-            </div>
-            <div class="card skill-card">
-              <div class="tech-icon">
-                <img src="img/Laravel.svg.png" alt="Laravel" />
-              </div>
-              <div class="skill-content"><strong>Laravel</strong><p>APIs, back-end PHP</p></div>
+              <div class="skill-content"><strong>React</strong><p>Interfaces dynamiques</p></div>
             </div>
             <div class="card skill-card">
               <div class="tech-icon">
                 <img src="img/github-icone.png" alt="GitHub" />
               </div>
-              <div class="skill-content"><strong>GitHub</strong><p>Versioning, collaboration</p></div>
+              <div class="skill-content"><strong>GitHub</strong><p>Versioning</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pole">
+          <h3>Culture Technique</h3>
+          <div class="pole-grid">
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <ellipse cx="12" cy="6" rx="8" ry="3" stroke="#000" stroke-width="1.5" fill="none"/>
+                  <path d="M4 6V18C4 19.6569 7.58172 21 12 21C16.4183 21 20 19.6569 20 18V6" stroke="#000" stroke-width="1.5" fill="none"/>
+                  <path d="M4 12C4 13.6569 7.58172 15 12 15C16.4183 15 20 13.6569 20 12" stroke="#000" stroke-width="1.5" fill="none"/>
+                </svg>
+              </div>
+              <div class="skill-content"><strong>SQL</strong><p>Bases de données</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <span style="font-size:24px; font-weight:700;">C#</span>
+              </div>
+              <div class="skill-content"><strong>C#</strong><p>Concepts objet</p></div>
+            </div>
+            <div class="card skill-card">
+              <div class="tech-icon">
+                <span style="font-size:24px; font-weight:700;">PHP</span>
+              </div>
+              <div class="skill-content"><strong>PHP</strong><p>Logique backend</p></div>
             </div>
           </div>
         </div>
@@ -129,40 +165,27 @@
     </section>
 
     <section id="contact" class="container contact">
-      <h2>Contact</h2>
-      <p>Intéressé par une alternance UX/UI ? Contactez-moi :</p>
-      <ul>
-        <li>
-          <span class="icon" aria-hidden="true">
-            <!-- phone -->
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 3.08 4.18 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.72c.12.9.36 1.76.72 2.56a2 2 0 0 1-.45 2.11L9.7 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.11-.45c.8.36 1.66.6 2.56.72A2 2 0 0 1 22 16.92z"/>
-            </svg>
-          </span>
-          Téléphone: <a href="tel:0631356756">06 31 35 67 56</a>
-        </li>
-        <li>
-          <span class="icon" aria-hidden="true">
-            <!-- mail -->
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
-              <polyline points="3 7 12 13 21 7" />
-            </svg>
-          </span>
-          Email: <a href="mailto:admcr019@gmail.com">admcr019@gmail.com</a>
-        </li>
-        <li>
-          <span class="icon" aria-hidden="true">
-            <!-- linkedin -->
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-14h4v2" />
-              <rect x="2" y="8" width="4" height="12" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-          </span>
-          LinkedIn: <a href="https://www.linkedin.com/in/adrien-macaire-568b0b28b/">https://www.linkedin.com/in/adrien-macaire-568b0b28b/</a>
-        </li>
-      </ul>
+      <div class="contact-block">
+        <h2>Travaillons ensemble</h2>
+        <p class="contact-lead">Intéressé par une alternance en UX/UI ou un projet stimulant ? Parlons-en et voyons comment mes compétences peuvent enrichir votre équipe.</p>
+        <div class="contact-actions">
+          <a class="btn-inversion" href="mailto:admcr019@gmail.com">M'envoyer un email <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+        <ul class="contact-socials">
+          <li>
+            <a href="tel:0631356756">
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 3.08 4.18 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.72c.12.9.36 1.76.72 2.56a2 2 0 0 1-.45 2.11L9.7 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.11-.45c.8.36 1.66.6 2.56.72A2 2 0 0 1 22 16.92z"/></svg></span>
+              06 31 35 67 56
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/adrien-macaire-568b0b28b/">
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-14h4v2" /><rect x="2" y="8" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></span>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="certifications" class="container certifications">
