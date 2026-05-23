@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Comité de Jumelage - Adrien Macaire</title>
+  <meta name="description" content="Case study du projet Comité de Jumelage - Refonte UX/UI">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .case-study {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .case-study h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+    .case-study .project-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+      padding: 20px;
+      background: rgba(0, 85, 255, 0.05);
+      border-radius: 8px;
+    }
+    .case-study .meta-item {
+      border-left: 3px solid #0055FF;
+      padding-left: 15px;
+    }
+    .case-study .meta-item strong {
+      display: block;
+      color: #0055FF;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .case-study section {
+      margin: 60px 0;
+    }
+    .case-study section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .case-study section h2::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: #0055FF;
+      border-radius: 2px;
+      margin-right: 12px;
+    }
+    .case-study p {
+      line-height: 1.8;
+      margin: 15px 0;
+      color: #b3b3b3;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: #0055FF;
+      text-decoration: none;
+      margin-bottom: 40px;
+      transition: gap 0.3s ease;
+      gap: 8px;
+    }
+    .back-link:hover {
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <a id="top"></a>
+  
+  <header id="site-header" class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html#top">Adrien — UX/UI</a>
+      <nav class="nav" id="main-nav">
+        <a href="index.html#projects">Projets</a>
+        <a href="index.html#skills">Compétences</a>
+        <a href="index.html#cv">CV</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#certifications">Certifications</a>
+        <a href="index.html#about">À propos</a>
+      </nav>
+      <button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="case-study">
+      <a href="index.html#projects" class="back-link">← Retour aux projets</a>
+      
+      <h1>Comité de Jumelage</h1>
+      
+      <div class="project-meta">
+        <div class="meta-item">
+          <strong>Rôle</strong>
+          <span>UX/UI Designer & Développeur</span>
+        </div>
+        <div class="meta-item">
+          <strong>Outils & Technos</strong>
+          <span>Figma, HTML, CSS, JavaScript</span>
+        </div>
+        <div class="meta-item">
+          <strong>Statut</strong>
+          <span>En cours de développement</span>
+        </div>
+      </div>
+      
+      <section>
+        <h2>Introduction & Contexte</h2>
+        <h3>Présentation du projet</h3>
+        <p>Le Comité de Jumelage est une organisation à but non lucratif dédiée au renforcement des liens interculturels et au partage d'expériences entre les communautés.</p>
+        <h3>Objectif</h3>
+        <p>Refondre la plateforme web avec une approche centrée sur l'utilisateur pour livrer une interface moderne, inclusive et intuitive, favorisant l'engagement associatif.</p>
+        <h3>Ma mission</h3>
+        <p>J'interviens sur la globalité du processus web : de la phase de conception UX/UI via Figma à l'intégration technique en HTML, CSS et JavaScript.</p>
+      </section>
+
+      <section>
+        <h2>Conclusion & État d'avancement</h2>
+        <h3>Vision</h3>
+        <p>Le projet est en phase de développement. Une base solide a été posée pour garantir un standard de qualité élevé en s'appuyant sur des principes d'accessibilité et un design épuré.</p>
+        <h3>Apprentissages techniques</h3>
+        <ul style="color: #b3b3b3; line-height: 1.8;">
+          <li>Intégrer les normes d'accessibilité dès le processus de conception (Figma) jusqu'à l'implémentation.</li>
+          <li>Convertir des interfaces design complexes de manière responsive en HTML/CSS/JS.</li>
+          <li>Adapter des workflows techniques pour des utilisateurs cibles tout en gérant les besoins des parties prenantes.</li>
+        </ul>
+        <h3>Prochaines étapes</h3>
+        <ul style="color: #b3b3b3; line-height: 1.8;">
+          <li>Clôture de la phase de prototypage de la solution.</li>
+          <li>Intégration du front-end et structuration logique du projet.</li>
+          <li>Tests d'assurances qualité (QA) et d'accessibilité avant mise en production.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

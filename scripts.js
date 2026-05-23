@@ -22,22 +22,17 @@
     })
   })
   
-    // Header scrolled state and back-to-top button
     const header = document.getElementById('site-header');
     const backToTop = document.getElementById('back-to-top');
 
-    const fallback = document.getElementById('back-to-top-fallback');
     function onScroll(){
-      const y = window.scrollY || window.pageYOffset;
+      const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
       if(header){
         if(y > 30) header.classList.add('scrolled'); else header.classList.remove('scrolled');
       }
       if(backToTop){
         // show earlier so users spot it quickly on longer pages
         if(y > 20) backToTop.classList.add('show'); else backToTop.classList.remove('show');
-      }
-      if(fallback){
-        if(y > 20) fallback.classList.add('show'); else fallback.classList.remove('show');
       }
     }
 
@@ -63,7 +58,7 @@
       const progressEl = document.getElementById('scroll-progress');
       // Smooth scroll helper (requestAnimationFrame) for consistent animation
       function smoothScrollTo(targetY, duration){
-        const startY = window.scrollY || window.pageYOffset;
+        const startY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         const distance = targetY - startY;
         const startTime = performance.now();
         if(progressEl){ progressEl.style.width = '0%'; progressEl.classList.add('show'); }
@@ -99,13 +94,6 @@
           }
         }, 1100);
       });
-      if(fallback){
-        // Make fallback use the same smooth scroll instead of default jump
-        fallback.addEventListener('click', function(e){
-          e.preventDefault();
-          smoothScrollTo(0, 1000);
-        });
-      }
     }
 
     // Scroll Reveal functionality (Intersection Observer)
@@ -205,5 +193,6 @@
       }
       animateGlow();
     }
+
 
   })();

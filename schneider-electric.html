@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Schneider Electric - Adrien Macaire</title>
+  <meta name="description" content="Développement d'une application C# pour la ligne de production FBX chez Schneider Electric">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .case-study {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .case-study h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+    .case-study .project-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+      padding: 20px;
+      background: rgba(0, 85, 255, 0.05);
+      border-radius: 8px;
+    }
+    .case-study .meta-item {
+      border-left: 3px solid #0055FF;
+      padding-left: 15px;
+    }
+    .case-study .meta-item strong {
+      display: block;
+      color: #0055FF;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .case-study section {
+      margin: 60px 0;
+    }
+    .case-study section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .case-study section h2::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: #0055FF;
+      border-radius: 2px;
+      margin-right: 12px;
+    }
+    .case-study p {
+      line-height: 1.8;
+      margin: 15px 0;
+      color: #b3b3b3;
+    }
+    .case-study ul {
+      color: #b3b3b3;
+      line-height: 1.8;
+      margin-left: 20px;
+    }
+    .case-study li {
+      margin-bottom: 10px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: #0055FF;
+      text-decoration: none;
+      margin-bottom: 40px;
+      transition: gap 0.3s ease;
+      gap: 8px;
+    }
+    .back-link:hover {
+      gap: 12px;
+    }
+    .btn-report {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #0055FF;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-report:hover {
+      background-color: #003acc;
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <a id="top"></a>
+  
+  <header id="site-header" class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html#top">Adrien — UX/UI & Dev</a>
+      <nav class="nav" id="main-nav">
+        <a href="index.html#projects">Projets</a>
+        <a href="index.html#skills">Compétences</a>
+        <a href="index.html#cv">CV</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#certifications">Certifications</a>
+        <a href="index.html#about">À propos</a>
+      </nav>
+      <button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="case-study">
+      <a href="index.html#projects" class="back-link">← Retour aux projets</a>
+      
+      <h1>Schneider Electric</h1>
+      
+      <div class="project-meta">
+        <div class="meta-item">
+          <strong>Type de projet</strong>
+          <span>Stage Développeur</span>
+        </div>
+        <div class="meta-item">
+          <strong>Technologies</strong>
+          <span>C#, .NET, Base de données</span>
+        </div>
+        <div class="meta-item">
+          <strong>Domaine</strong>
+          <span>Industrie / Ligne FBX</span>
+        </div>
+      </div>
+      
+      <section>
+        <h2>Contexte du projet</h2>
+        <p>Lors de ce projet pour Schneider Electric, j'ai été chargé du développement d'une application C# dédiée à la ligne de production FBX (unité d'isolation gazeuse).</p>
+        <p>Cette application permet non seulement de gérer les informations liées à la production, mais aussi d'effectuer des consultations. Elle offre la possibilité de visualiser les différents types de produits ainsi que les résultats des tests servant à vérifier qu'il n'y a aucune fuite d'électricité. L'application intègre également une gestion complète des droits pour sécuriser les actions.</p>
+        
+        <a href="doc/Compte%20rendu%20de%20stage%20Schneider%20Electric.pdf" target="_blank" rel="noopener noreferrer" class="btn-report">
+          Lire le compte-rendu de stage
+        </a>
+      </section>
+
+      <section>
+        <h2>Fonctionnalités développées</h2>
+        
+        <h3>1. Écran de connexion</h3>
+        <p>Le tout premier écran permet la sélection d'un compte parmi "Consultation", "Admin" ou "Ligne de FBX", ainsi qu'une saisie de mot de passe pour accéder à la session appropriée.</p>
+        
+        <h3>2. Page de déconnexion</h3>
+        <p>Une option dédiée permet aux utilisateurs de mettre fin à leur session de manière sécurisée en se déconnectant de l'application.</p>
+        
+        <h3>3. Administration</h3>
+        <p>Cet espace donne à l'administrateur les pleins pouvoirs sur le système :</p>
+        <ul>
+          <li>Gestion des mots de passe (ajout et suppression).</li>
+          <li>Ajout d'un nouveau produit (après vérification de sa non-existence) et suppression (en s'assurant au prélablable qu'il n'est pas utilisé par une autre table).</li>
+          <li>Création d'une nouvelle cellule avec des contraintes strictes : un numéro de série formaté (ex: <code>dg-aaaa-WnumSemaine-j-xxxx</code>), un type de cellule obligatoirement en majuscules, et une valeur de tension qui ne peut pas être négative. L'enregistrement n'est effectif que si la cellule est bien unique.</li>
+        </ul>
+        
+        <h3>4. Consultation</h3>
+        <p>Accessible à tous, cet écran permet d'avoir une vue globale sur les opérations :</p>
+        <ul>
+          <li>Visualisation des types de produits disponibles.</li>
+          <li>Affichage des résultats des tests de la table <code>tabResultDetails</code>.</li>
+          <li>Filtres pratiques, permettant par exemple de chercher une cellule par son numéro de série (limité à 18 caractères) ou un type de produit spécifique (limité à 50 caractères).</li>
+        </ul>
+        
+        <h3>5. Ligne de FBX</h3>
+        <p>Cet espace est pensé pour la productivité directe. Un formulaire simple et rapide permet d'ajouter une nouvelle cellule. Il demande de renseigner :</p>
+        <ul>
+          <li>Le numéro de série, soumis exactement au même format industriel (<code>dg-aaaa-WnumSemaine-j-xxxx</code>).</li>
+          <li>Le type de produit, avec une sélection facile depuis une liste déroulante limitant les erreurs.</li>
+          <li>La tension mesurée.</li>
+        </ul>
+        <p>Un contrôle est effectué lors de la saisie : si la cellule est déjà enregistrée, un message d'erreur explicite bloque l'ajout, garantissant l'intégrité de la base de données.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
